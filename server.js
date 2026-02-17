@@ -86,6 +86,11 @@ app.post('/api/rsvp', async (req, res) => {
     }
 });
 
+// Health Check Route
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
